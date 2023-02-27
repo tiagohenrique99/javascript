@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nacionalidade</title>
+    <style>
+        body{
+            height: 100vh;
+            font: normal 1em Arial;
+            background-color: black;
+            color: white;
+            
+        }
+        input{ 
+            display: block;
+            margin: auto;
+            margin-bottom: 20px;
+        }
+
+        h1{
+            text-align: center;
+        }
+
+        p{
+            text-align: center;
+            text-transform: uppercase;
+            font-weight: bolder;
+        }
+
+
+    </style>
+</head>
+<body>
+    <h1>Qual seu pais  de origem?</h1>
+    <input type="text" name="pais" id="pais">
+    <input type="button" value="Verificar" onclick="responder()">
+    <div id="res">
+
+    </div>
+
+    <script>
+        function responder() {
+            var pergunta = document.querySelector('input#pais')
+            var res = document.querySelector('div#res')
+            var pais = (pergunta.value) 
+            res.innerHTML = `<p> vivendo em ${pais}!`
+            if (pais == 'brasil' ) {
+                res.innerHTML += `<p> Você é Brasileiro!</p>`
+                
+            } else {
+                res.innerHTML += `<p> Você é Estrangeiro!</p>`
+            }    
+        }
+           
+    </script>
+</body>
+</html>
