@@ -2,7 +2,7 @@ function aplicarDesconto (valor,desconto){
     return (valor - (valor * (desconto / 100)));
 }
 
-function aplicarAcrescimo(valor,juros){
+function aplicarJuros(valor,juros){
     return (valor + (valor * (juros / 100)));
 }
 
@@ -17,5 +17,5 @@ if (formaDePagamento === 1){
 }else if (formaDePagamento === 3){
     console.log(precoEtiqueta);
 }else {
-    console.log(aplicarAcrescimo(precoEtiqueta,10));
+    console.log(aplicarJuros(precoEtiqueta,10));
 }
